@@ -3,7 +3,7 @@ import edu.princeton.cs.algs4.Out;
 import edu.princeton.cs.algs4.StopwatchCPU;
 
 public class Experimento {
-
+    //a
     public static void experimento1() {
         // Implementación del experimento 1
          int[] tamanos = {1024, 2048, 4096, 8192, 16384, 32768};
