@@ -9,23 +9,23 @@ public class Quick {
    public static void sort(ArrayList<Song> songs, Comparator<Song> comparator) {
         int n = songs.size();
         
-        // 1. Shuffle manual usando StdRandom adaptado para ArrayList
+        //adaptado para arraylist
         for (int i = 0; i < n; i++) {
-            int r = StdRandom.uniform(i, n); 
+            int r = StdRandom.uniform(i, n); //esta obsoleto, pero no cambia nada
             exch(songs, i, r); 
         }
         
-        // 2. Llamada al sort privado recursivo pasándole el comparador
+        //se le pasa el coomparador a la función recursiva
         sort(songs, 0, n - 1, comparator);
     }
 
     private static void sort(ArrayList<Song> songs, int lo, int hi, Comparator<Song> comparator) {
         if (hi <= lo) return;
         
-        // El comparador viaja a la partición
+        
         int j = partition(songs, lo, hi, comparator);
         
-        // El comparador viaja a las siguientes divisiones recursivas
+        
         sort(songs, lo, j - 1, comparator);
         sort(songs, j + 1, hi, comparator);
     }

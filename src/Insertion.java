@@ -13,7 +13,8 @@ public class Insertion {
      * @param comparator the comparator specifying the order
      */
     
-    //el cambio que se realizo para este metodo fue cambiar el tipo de dato del arreglo a ArrayList<Song> y agregar un parametro de tipo Comparator<Song> para poder comparar los objetos Song segun el atributo que se desee ordenar
+    //el cambio que se realizo para este metodo fue cambiar el tipo de dato del arreglo a ArrayList<Song> 
+    //y agregar un parametro de tipo Comparator<Song> para poder comparar los objetos Song segun el atributo que se desee ordenar
     public static void sort(ArrayList<Song> songs, Comparator<Song> comparator) {
         int n = songs.size();
         for (int i = 1; i < n; i++) {

@@ -7,7 +7,11 @@ class SongDataBase {
     private ArrayList<Song> songs;
 
     public SongDataBase() {
-        songs = new ArrayList<>();
+        this.songs = new ArrayList<>();
+    }
+    //constructor para recibir una lista de canciones
+    public SongDataBase(ArrayList<Song> songs) {
+        this.songs = songs;
     }
 
     public void addSong(Song song) {
@@ -23,6 +27,8 @@ class SongDataBase {
         Comparator<Song> comparador;
         
         if("artist".equals(atributo)){
+            // Se usa lambda en lugar de method reference porque Song::getArtist
+            // daba error de compilacion
             comparador = Comparator.comparing(song -> song.getArtist());
         }else if("genre".equals(atributo)){
             comparador = Comparator.comparing(Song::getGenre);
